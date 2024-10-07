@@ -10,6 +10,21 @@ Simply put, it lets you type in ANY character with its attributes (weapon, eleme
 
 To improve efficiency, the data type used are byte and boolean. You cannot change the character's values once defined, and here are the indexes used in the class.
 
+### Fields
+    - name (String)
+    - element (byte)
+    - weapon (byte)
+    - isMale (boolean)
+    - isGenshin (boolean)
+
+### Methods
+    - .toString - Displays the character's info as inserted.
+    - .getWeapon - Returns the character's weapon.
+    - .getElement - Returns the character's element.
+    - .getGame - Returns the character's game.
+    - .getGender - Returns the character's gender.
+    - .getName - Returns the character's name.
+
 ### Game
 
 - `isGenshin`: A boolean value that indicates whether the character belongs to the Genshin Impact game or not.
@@ -17,13 +32,15 @@ To improve efficiency, the data type used are byte and boolean. You cannot chang
     - false: Honkai: Star Rail
 
 ### Weapon
-
 - `weaponIndex`: A byte value that represents the weapon type of the character. The available options are:
-  - 0: Sword
-  - 1: Bow
-  - 2: Catalyst
-  - 3: Polearm
-  - 4: Claymore
+    - if `isGenshin` is `true`:
+        - 0: Sword
+        - 1: Bow
+        - 2: Catalyst
+        - 3: Polearm
+        - 4: Claymore
+    - else, if `.getWeapon` is invoked, then it will return
+        - Light Cone
 
 ### Element
 
@@ -48,8 +65,8 @@ To improve efficiency, the data type used are byte and boolean. You cannot chang
 ### Gender
 
 - `isMale`: A boolean value that represents the gender of the character. The available options are:
-  - true: Male
-  - false: Female
+    - true: Male
+    - false: Female
 
 ## Usage
 
