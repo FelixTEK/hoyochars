@@ -8,7 +8,7 @@ Simply put, it lets you type in ANY character with its attributes (weapon, eleme
 
 ## Data types
 
-To improve efficiency, the data type used are byte and boolean. You cannot change the character's values once defined, and here are the indexes used in the class.
+To improve efficiency, the data type used are byte and boolean. You cannot change the character's values once defined, and here are the class's structure.
 
 ### Fields
     - name (String)
