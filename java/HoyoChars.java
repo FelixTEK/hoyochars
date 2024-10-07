@@ -114,13 +114,8 @@ public class HoyoChars{
         }
         return joinText.toString(); //This is toString of the StringBuilder class!
     }
-
+    /* for testing only! 
     public static void main(String[] args) {
-        /*byte element; //0 = anemo/wind, 1 = geo/physical, 2 = electro/lightning, 3 = dendro/imaginary, 4 = hydro/quantum, 5 = pyro/fire, 6 = cryo/ice
-        *byte weapon; //0 = sword, 1 = bow, 2 = catalyst, 3 = polearm, 4 = claymore
-        *boolean isMale; //true = male, false = female
-        * boolean isGenshin; //true = genshin, false = star rail
-        */
         HoyoChars Ayaka = new HoyoChars("Kamisato Ayaka", (byte)6, (byte)0, false, true);
         HoyoChars Yelan = new HoyoChars("Yelan", (byte)4, (byte)1, false, true);
         HoyoChars Zhongli = new HoyoChars("Zhongli", (byte)1, (byte)3, true, true);
@@ -131,7 +126,5 @@ public class HoyoChars{
         System.out.println(Zhongli.toString());
         System.out.println(Ruan_Mei.toString());
         System.out.println(Jing_Yuan.toString());
-        /*int test = Ruan_Mei.getName().length();
-        System.out.println(test);*/
-    }
+    }*/
 }
