@@ -1,10 +1,10 @@
 //FelixTEK 2024
 public class HoyoChars{
-    private String name;
-    private byte element; //0 = anemo/wind, 1 = geo/physical, 2 = electro/lightning, 3 = dendro/imaginary, 4 = hydro/quantum, 5 = pyro/fire, 6 = cryo/ice
-    private byte weapon; //0 = sword, 1 = bow, 2 = catalyst, 3 = polearm, 4 = claymore
-    private boolean isMale; //true = male, false = female
-    private boolean isGenshin; //true = genshin, false = star rail
+    final private String name;
+    final private byte element; //0 = anemo/wind, 1 = geo/physical, 2 = electro/lightning, 3 = dendro/imaginary, 4 = hydro/quantum, 5 = pyro/fire, 6 = cryo/ice
+    final private byte weapon; //0 = sword, 1 = bow, 2 = catalyst, 3 = polearm, 4 = claymore
+    final private boolean isMale; //true = male, false = female
+    final private boolean isGenshin; //true = genshin, false = star rail
 
     public HoyoChars(String charName, byte charElement, byte charWeapon, boolean charIsMale, boolean charIsGenshin){
         name = charName;
@@ -16,6 +16,86 @@ public class HoyoChars{
 
     String getName(){
         return this.name;
+    }
+
+    String getElement(){
+        if (this.isGenshin) {
+            switch (this.element) {
+                case (byte)0:
+                    return "Anemo";
+                case (byte)1:
+                    return "Geo";
+                case (byte)2:
+                    return "Electro";
+                case (byte)3:
+                    return "Dendro";
+                case (byte)4:
+                    return "Hydro";
+                case (byte)5:
+                    return "Pyro";
+                case (byte)6:
+                    return "Cryo";
+            }
+        }
+        else {
+            switch (this.element) {
+                case (byte)0:
+                    return "Wind";
+                case (byte)1:
+                    return "Physical";
+                case (byte)2:
+                    return "Lightning";
+                case (byte)3:
+                    return "Imaginary";
+                case (byte)4:
+                    return "Quantum";
+                case (byte)5:
+                    return "Fire";
+                case (byte)6:
+                    return "Ice";
+            }
+        }
+        return "No element provided";
+    }
+
+    String getWeapon(){
+        if (this.isGenshin) {
+            switch (this.weapon){
+                case (byte)0:
+                    return "Sword";
+                case (byte)1:
+                    return "Bow";
+                case (byte)2:
+                    return "Catalyst";
+                case (byte)3:
+                    return "Polearm";
+                case (byte)4:
+                    return "Claymore";
+                default:
+                    return "No weapon provided";
+            }
+        }
+        else {
+            return "Light Cone";
+        }
+    }
+
+    String getGender(){
+        if (this.isMale) {
+            return "Male";
+        }
+        else {
+            return "Female";
+        }
+    }
+
+    String getGame(){
+        if (this.isGenshin) {
+            return "Genshin Impact";
+        }
+        else {
+            return "Honkai: Star Rail";
+        }
     }
 
     @Override public String toString(){
@@ -126,5 +206,11 @@ public class HoyoChars{
         System.out.println(Zhongli.toString());
         System.out.println(Ruan_Mei.toString());
         System.out.println(Jing_Yuan.toString());
+        System.out.println(Ayaka.getWeapon());
+        System.out.println(Yelan.getElement());
+        System.out.println(Ruan_Mei.getGame());
+        System.out.println(Jing_Yuan.getWeapon());
+        System.out.println(Zhongli.getGender());
     }*/
 }
+    
